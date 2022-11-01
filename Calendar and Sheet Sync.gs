@@ -8,7 +8,7 @@ function myCalendar()
   var range=sheet.getRange("A2:C").getValues();
   range.map(function(elem,ind,obj){
     if(elem[0]!=""){
-     calendar.createEvent(elem[0], elem[1], elem[2]);
+     calendar.createEvent(elem[0], elem[1], elem[2]).addPopupReminder(10);
     }
   });
 }
